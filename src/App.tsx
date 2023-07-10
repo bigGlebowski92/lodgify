@@ -1,7 +1,12 @@
-import { useState } from 'react';
+import { UserCard } from './components/UserCard';
 
 function App() {
-  return <>Hello</>;
+  return (
+    <>
+      Yo
+      <UserCard />;
+    </>
+  );
 }
 
 export default App;
