@@ -1,11 +1,11 @@
 import { UserCard } from './components/UserCard';
+import { UserWidgetProvider } from './UserWidgetContext';
 
 function App() {
   return (
-    <>
-      Yo
-      <UserCard />;
-    </>
+    <UserWidgetProvider>
+      <UserCard />
+    </UserWidgetProvider>
   );
 }
 
