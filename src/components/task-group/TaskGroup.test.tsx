@@ -1,9 +1,10 @@
+/* eslint-disable */
 import { render, screen, fireEvent } from '@testing-library/react';
 import { TaskGroup } from './TaskGroup';
 
 test('renders the task group name', () => {
   const name = 'Test Group';
-  const tasks = [];
+  const tasks: [] = [];
   render(<TaskGroup name={name} tasks={tasks} />);
   const groupElement = screen.getByText(name);
   expect(groupElement).toBeInTheDocument();
@@ -11,7 +12,7 @@ test('renders the task group name', () => {
 
 test('toggles show/hide when header is clicked', () => {
   const name = 'Test Group';
-  const tasks = [];
+  const tasks: [] = [];
   render(<TaskGroup name={name} tasks={tasks} />);
   const header = screen.getByText(name);
   fireEvent.click(header);

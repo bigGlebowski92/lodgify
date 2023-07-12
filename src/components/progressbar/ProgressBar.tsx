@@ -29,6 +29,7 @@ export const ProgressBar = () => {
         <S.ProgressBar
           style={{ width: `${progressBar}%` }}
           className="progress-bar__bar"
+          data-testid="progress-bar__bar"
         >
           <S.ProgressBarText className="progress-bar__text">
             {progressBar.toFixed(0)}%
