@@ -8,6 +8,17 @@ export const TaskGroup = ({ name, tasks }: TaskGroupProps) => {
   const [isShow, setIsShow] = useState(false);
   const isCompleted = () => !tasks.filter(({ checked }) => !checked).length;
 
+  const ShowHide = isShow ? (
+    <S.ShowHideWrapper className="task-group__show-hide">
+      Hide
+      <ArrowLineUpIcon className="task-group__arrow-up-icon" />
+    </S.ShowHideWrapper>
+  ) : (
+    <S.ShowHideWrapper className="task-group__show-hide">
+      Show
+      <ArrowLineDownIcon className="task-group__arrow-down-icon" />
+    </S.ShowHideWrapper>
+  );
   return (
     <S.TaskGroupWrapper className="task-group">
       <S.HeaderWrapper onClick={() => setIsShow(!isShow)}>
@@ -21,17 +32,7 @@ export const TaskGroup = ({ name, tasks }: TaskGroupProps) => {
             {name}
           </S.HeaderTitle>
         </S.TitleWrapper>
-        {isShow ? (
-          <S.ShowHideWrapper className="task-group__show-hide">
-            Hide
-            <ArrowLineUpIcon className="task-group__arrow-up-icon" />
-          </S.ShowHideWrapper>
-        ) : (
-          <S.ShowHideWrapper className="task-group__show-hide">
-            Show
-            <ArrowLineDownIcon className="task-group__arrow-down-icon" />
-          </S.ShowHideWrapper>
-        )}
+        {ShowHide}
       </S.HeaderWrapper>
       {isShow && (
         <ul className="task-group__task-list">
