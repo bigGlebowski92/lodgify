@@ -21,12 +21,14 @@ export const TitleWrapper = styled.div`
 `;
 
 export const HeaderTitle = styled.div`
-  font-size: 18px;
+  font-size: clamp(9px, 1.5vw, 18px);
   line-height: 22px;
   margin-left: 16px;
 `;
 
 export const ShowHideWrapper = styled.div`
+  font-size: clamp(9px, 1.5vw, 16px);
+
   color: #999999;
   svg {
     margin-left: 16px;

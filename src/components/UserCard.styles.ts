@@ -9,7 +9,7 @@ export const UserCardWrapper = styled.div`
 `;
 
 export const CardWrapper = styled.div`
-  width: 900px;
+  width: clamp(200px, 75%, 900px);
   padding: 20px;
   border-radius: 25px;
   border: 1px solid #ccc;

@@ -4,6 +4,7 @@ export const CheckboxWrapper = styled.label`
   display: flex;
   align-items: center;
   padding-bottom: 16px;
+  font-size: clamp(8px, 1.5vw, 16px);
 `;
 
 export const Checkbox = styled.div<{ checked: boolean }>`
