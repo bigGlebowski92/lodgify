@@ -11,7 +11,7 @@ export const UserCard = () => {
     <S.UserCardWrapper className="user-card">
       <S.CardWrapper className="card">
         <S.Header className="card__header">
-          <S.Title className="card__title">Lodgify User Card</S.Title>
+          <S.Title className="card__title">Lodgify Grouped Tasks</S.Title>
           <ProgressBar />
         </S.Header>
 
